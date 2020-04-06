@@ -1,0 +1,63 @@
+button{
+  border-radius: 0%;
+  border-color: #03DAC6;
+  color:#03DAC6;
+}
+button:disabled{
+  color:#03DAC6;
+}
+button:hover{
+  background-color: #03DAC6;
+}
+.custom-brand:hover,.custom-brand:active{
+  color: #03DAC6;
+}
+
+.custom-brand{
+  color: #03DAC6;
+  text-decoration: none;
+
+}
+input{
+  border-radius: 0px;
+  border-color: #03DAC6;
+  background: transparent;
+  color:white;
+}
+
+input:focus{
+  border: 1px solid #03DAC6;
+  background: lightgrey;
+}
+input::placeholder{
+  color:#03DAC6;
+}
+.navbar-brand{
+  color: #03DAC6;
+}
+h1{
+  color: #005662;
+}
+
+
+.navbar{
+  background-color: #005662;
+}
+
+.dropdown-item{
+  border: 0px;
+  color: #005662;
+}
+.dropdown-menu{
+  border: 0px;
+  border-radius: 0px;
+  background-color: lightgray;
+  color: #005662;
+}
+.dropdown{
+  border: 0px;
+  padding: 0px;
+}
+.dropdown-item:hover{
+  background-color: lightgray;
+}

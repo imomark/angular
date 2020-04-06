@@ -1,0 +1,30 @@
+<div *ngIf="display" class="d-flex justify-content-center"><mat-spinner class=" display-1" color="#005662"></mat-spinner></div>
+<div class="card text-center shadow" *ngIf="!display">
+  <div class="card-header card-fixed">
+    {{book.volumeInfo.title}}
+  </div>
+  <div class="card-body overflow-auto card-custom">
+    <h5 class="card-title">{{book.volumeInfo?.subtitle || book.volumeInfo.title}}</h5>
+    <img src="{{book.volumeInfo.imageLinks?.thumbnail || '../../../../../assets/default-book.png'}}" alt="image" class="img-thumbnail">
+    <hr>
+    <div class="d-flex flex-column justify-content-around">
+      <span><strong>Ratings : </strong>{{book.volumeInfo.averageRating || 'NA'}}</span>
+      <span><strong>Authors : </strong>{{book.volumeInfo.authors}}</span>
+      <span><strong>Category : </strong>{{book.volumeInfo.categories || 'NA'}}</span>
+      <span><strong>Page Count : </strong>{{book.volumeInfo.pageCount}}</span>
+      <span><strong>Published Date : </strong>{{book.volumeInfo.publishedDate}}</span>
+      <span><strong>Publisher : </strong>{{book.volumeInfo.publisher}}</span>
+      <span *ngIf="book.saleInfo.listPrice?.amount"><strong>Price : </strong>{{book.saleInfo.listPrice.amount |currency: 'INR'}}</span>
+      <span><strong>Maturity Rating : </strong><i>{{book.volumeInfo.maturityRating}}</i></span>
+    </div>
+
+    <hr>
+    <p class="card-text" [innerHTML]="book.volumeInfo.description"></p>
+    <a href="{{book.volumeInfo.previewLink}}" class="btn">Preview</a>
+    <a href="{{book.accessInfo.webReaderLink}}" class="btn">Web Reader</a>
+  </div>
+  <div class="card-footer  card-fixed">
+    <a class="btn d-inline-flex custom-a" (click)="onBack()"><mat-icon class="justify-content-start">arrow_back_ios</mat-icon>
+      <span class="justify-content-center">Back</span></a>
+  </div>
+</div>

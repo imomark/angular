@@ -1,0 +1,25 @@
+table{
+  width: 100%;
+}
+
+
+th , mat-paginator{
+  background-color: #005662;
+  color: #03DAC6;
+}
+td{
+  background-color: lightgray;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #005662;
+}
+
+.mat-spinner::ng-deep circle {
+  stroke: #005662;
+}
+.custom-table{
+  max-height: 500px;
+}

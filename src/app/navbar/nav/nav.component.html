@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light shadow">
+  <a routerLink="/" class="custom-brand">
+    <mat-icon class="d-inline-block align-top mr-2">collections_bookmark</mat-icon>
+    <strong>Book</strong>Jack
+  </a>
+
+  <form class="form-inline" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="input-group">
+      <input type="text" class="form-control"
+      placeholder="Find Books"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+      name="id"
+      required
+      ngModel>
+      <div class="input-group-append">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{itemSelected}}
+          </button>
+          <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="changetext('title')">Title</a>
+            <hr>
+            <a class="dropdown-item" (click)="changetext('author')">Author</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary ml-2"  [disabled]="f.invalid">Search</button>
+  </form>
+</nav>
+
